@@ -1,0 +1,180 @@
+<% layout('layouts/boilerplate') %>
+
+<form
+  id="detailForm"
+  action="/details"
+  method="post"
+  class="container-lg needs-validation"
+  novalidate
+>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="detail[firstName]"
+          required
+          pattern="[A-Za-z]+"
+        />
+        <small class="invalid-feedback"
+          >First Name is required and must contain only alphabetical
+          characters</small
+        >
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          name="detail[lastName]"
+          required
+          pattern="[A-Za-z]+"
+        />
+        <small class="invalid-feedback"
+          >Last Name is required and must contain only alphabetical
+          characters</small
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="mobileNo" class="form-label">Mobile No:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="mobileNo"
+          name="detail[mobileNo]"
+          pattern="\d{10}"
+          required
+        />
+        <small class="invalid-feedback">Mobile Number must be 10 digits</small>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="emailId" class="form-label">Email ID:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="emailId"
+          name="detail[emailId]"
+          required
+        />
+        <small class="invalid-feedback">Email is not valid</small>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="street" class="form-label">Street:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="street"
+          name="detail[address][street]"
+          required
+        />
+        <small class="invalid-feedback">Street is required</small>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="city" class="form-label">City:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="city"
+          name="detail[address][city]"
+          required
+          pattern="[A-Za-z]+"
+        />
+        <small class="invalid-feedback"
+          >City is required and must contain only alphabetical characters</small
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="state" class="form-label">State:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="state"
+          name="detail[address][state]"
+          required
+          pattern="[A-Za-z]+"
+        />
+        <small class="invalid-feedback"
+          >State is required and must contain only alphabetical
+          characters</small
+        >
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="country" class="form-label">Country:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          name="detail[address][country]"
+          required
+          pattern="[A-Za-z]+"
+        />
+        <small class="invalid-feedback"
+          >Country is required and must contain only alphabetical
+          characters</small
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="loginId" class="form-label">Login ID:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="loginId"
+          name="detail[loginId]"
+          required
+        />
+        <small class="invalid-feedback">Login ID is required</small>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="detail[password]"
+          required
+        />
+        <small class="invalid-feedback"
+          >Password must be at least 6 characters long and include at least one
+          uppercase letter, one lowercase letter, and one special
+          character</small
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </div>
+</form>
+<br />

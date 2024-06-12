@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container-lg">
+  <h1>Details</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobile No</th>
+        <th>Email ID</th>
+        <th>Address</th>
+        <th>Login ID</th>
+        <th>Created At</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let detail of allDetails) { %>
+      <tr>
+        <td><strong><%= detail.firstName %> <%= detail.lastName %></strong></td>
+        <td><%= detail.mobileNo %></td>
+        <td><%= detail.emailId %></td>
+        <td>
+          <%= detail.address.street %>, <%= detail.address.city %>, <%=
+          detail.address.state %>, <%= detail.address.country %>
+        </td>
+        <td><%= detail.loginId %></td>
+        <td><%= detail.creationTime.toISOString().slice(0, 10) %></td>
+        <td><%= detail.lastUpdated.toISOString().slice(0, 10) %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+  <form action="/details/new" method="get">
+    <button class="btn btn-primary mt-3">Back to form</button>
+  </form>
+</div>
+<br />
+<br />

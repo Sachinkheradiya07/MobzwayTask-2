@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Join Room</h1>
+    <form
+      id="loginForm"
+      action="/check-email"
+      method="POST"
+      class="form-inline justify-content-center"
+    >
+      <div class="form-group mb-2">
+        <input
+          type="email"
+          id="emailId"
+          name="emailId"
+          placeholder="Enter your email"
+          required
+          class="form-control mr-2"
+        />
+        <br />
+        <button type="submit" class="btn btn-lg btn-primary ml-2">Login</button>
+      </div>
+    </form>
+  </div>
+</body>
